@@ -1,0 +1,566 @@
+@charset "utf-8";
+
+
+/*---基本設定↓---*/
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  font-family: 游ゴシック体, YuGothic, "游ゴシック Medium", "Yu Gothic Medium", 游ゴシック, "Yu Gothic", sans-serif;
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: #333;
+  line-height: 2;
+}
+
+
+
+/*----------ヘッダー↓----------*/
+
+.headerInner{
+  min-height: 480px;
+  height: 40vw;
+  background: url(../images/main_visual.jpg) center top no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 100px;
+}
+
+.topLogo{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+h1{
+  font-size: 3.6rem;
+}
+
+h1 span{
+  background-color: #000;
+  color: #FFF;
+  padding: 5px 10px 0;
+}
+
+.iconTextWrapper{
+  color: #008DD5;
+}
+
+.iconTextWrapper:hover{
+  color: #fff;
+}
+
+.iconText{
+  background-color: #fff;
+  border: 5px solid #008DD5;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.3;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.5;
+}
+
+.iconText:hover{
+  background-color: #008dd5;
+  transition: 0.2s ease 0s;
+}
+
+
+
+/*---ナビ↓---*/
+
+.headerNavigation{
+  display: flex;
+  justify-content: space-between;
+  background-color: #008DD5;
+  height: 76px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.headerNaviLeft ul{
+  display: flex;
+  list-style: none;
+  margin-left: 60px;
+}
+
+.headerNaviLeft ul li{
+  padding: 5px 50px 0 0;
+}
+
+.headerNaviLeft ul li a, .headerNaviRight a{
+  color: #fff;
+  text-decoration-line: none;
+}
+
+.headerNaviLeft ul li a:hover{
+  opacity: 0.7;
+  transition: 0.2s ease 0s;
+}
+
+.headerNaviRight a{
+  display: inline-block;
+  padding: 30px 50px;
+  background-color: #A9D92F;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: #fff;
+  position: relative;
+}
+
+.headerNaviRight a::after{
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: opacity 0.2s ease 0s;
+}
+
+.headerNaviRight a:hover::after{
+  opacity: 0.3;
+}
+
+
+
+/*----------セクション↓----------*/
+
+section{
+  padding: 70px 0 100px;
+  display: block;
+}
+
+.sectionTitle{
+  text-align: center;
+  font-size: 3.2rem;
+  margin-bottom: 50px;
+}
+
+.sectionTitle span{
+  position: relative;
+  padding: 0 22px;
+}
+
+.sectionTitle span::before,
+.sectionTitle span::after{
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+}
+
+.sectionTitle span::before{
+  top: 0;
+  left: 0;
+  background: linear-gradient(135deg, #008DD5 0%, #008DD5 50%, transparent 50%, transparent 100%);
+}
+
+.sectionTitle span::after{
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, transparent 0%, transparent 50%, #008DD5 50%, #008DD5 100%);
+}
+
+
+
+/*---セクションnews↓---*/
+
+.newsInner{
+  list-style: none;
+  width: 640px;
+  margin: 0 auto 50px;
+}
+
+.newsInner li{
+  padding: 0 0 20px 0;
+}
+
+.newsInner li a{
+  text-decoration-line: none;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+}
+
+.newsInner li a:hover{
+  text-decoration-line: underline;
+}
+
+.newsInner li a span{
+  width: 470px;
+}
+
+.newsText{
+  text-align: center;
+}
+
+
+
+/*----------中央太文字ボタン↓----------*/
+
+.bold{
+  text-decoration-line: none;
+  color: #008DD5;
+  font-weight: bold;
+}
+
+
+
+/*----------中央寄せ↓----------*/
+
+.serviceInnerWrapper, .clientInnerWrapper{
+  width: 1000px;
+  margin: 0 auto;
+}
+
+/*----------セクションカラー↓----------*/
+
+.service, .client{
+  background-color: #E6F6FF;
+}
+
+
+
+/*---セクションservice↓---*/
+
+.serviceInner{
+  background-color: #fff;
+  padding: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.serviceLeft{
+  width: 460px;
+}
+
+.serviceRight{
+  width: 360px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.serviceRight li{
+  margin: 0 40px 20px 0;
+}
+
+.serviceRight li:nth-child(4){
+  margin: 0 40px;
+}
+
+.serviceRight li:nth-child(5){
+  margin: 0 40px 0 0;
+}
+
+.serviceRight li:nth-child(6){
+  margin: 0;
+}
+
+.serviceText{
+  margin: 40px 0 0 0;
+}
+
+
+
+/*---ボタンのデザイン↓---*/
+
+.bottonBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 280px;
+  height: 60px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid #008DD5;
+  border-radius: 4px;
+  position: relative;
+  transition: 0.2s ease 0s;
+  transition-property: background-color, color;
+}
+
+.bottonBox:hover{
+  background-color: #008dd5;
+  color: #fff;
+}
+
+.bottonBox::before, .bottonBox::after{
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  z-index: 1;
+  transition: opacity 0.2s ease 0s;
+}
+
+.bottonBox::before{
+  background: linear-gradient(135deg, transparent 0%, transparent 50%, #008DD5 50%, #008DD5 100%);
+  opacity: 1;
+}
+
+.bottonBox::after{
+  background: linear-gradient(135deg, transparent 0%, transparent 50%, #fff 50%, #fff 100%);
+  opacity: 0;
+}
+
+.bottonBox:hover::before{
+  opacity: 0;
+}
+
+.bottonBox:hover::after{
+  opacity: 1;
+}
+
+
+
+/*---セクションstrong↓---*/
+
+.strongInner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.strongInnerRight{
+  width: 660px;
+  margin: 0 0 0 40px;
+}
+
+.sectionMiddleTitle{
+  font-size: 2.4rem;
+  font-weight: bold;
+  border-bottom: 2px solid #008DD5;
+  margin: 0 0 25px 0;
+}
+
+
+
+/*---セクションclient↓---*/
+
+.clientInner{
+  background-color: #fff;
+  padding: 60px;
+}
+
+.clientBox{
+  width: 400px;
+  border: 1px solid #DDD;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.leftBox{
+  float: left;
+}
+
+.rightBox{
+  float: right;
+}
+
+.clientBox p, .sectionSmallTitle{
+  margin: 0;
+}
+
+.clientBox p img{
+  vertical-align: bottom;
+}
+
+.sectionSmallTitle{
+  background-color: #008DD5;
+  color: #fff;
+  padding: 10px 0 10px 20px;
+  font-weight: normal;
+}
+
+.clientText{
+  padding: 20px;
+  line-height: 1.75;
+}
+
+.clientBox:nth-child(3){
+  clear: both;
+  margin: 80px 0 0 0;
+}
+
+.clientBox:nth-child(4){
+  margin: -50px 0 0 0;
+}
+
+
+
+/*---セクションinformation↓---*/
+
+.informationInner{
+  width: 600px;
+  margin: 0 auto;
+}
+
+.contactForm{
+  margin: 0 0 30px 0;
+}
+
+.formPartsText{
+  display: block;
+  font-weight: bold;
+}
+
+.formPartsInput{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 4px;
+}
+
+.selectersWrapper{
+  position: relative;
+  width: 200px;
+  height: 40px;
+  display: block;
+}
+
+.selectersWrapper::after {
+  content: '';
+  display: block;
+  width: 12px;
+  height: 9px;
+  background: url(../images/icon-triangle.png) left top no-repeat;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.selectersWrapper select{
+  width: 100%;
+  height: 100%;
+  -webkit-appearance: none;
+  border: none;
+  outline: none;
+  padding: 0 0 0 10px;
+  box-sizing: border-box;
+  border: 1px solid #333;
+  border-radius: 4px;
+}
+
+.formParts textarea{
+  width: 600px;
+  height: 200px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #333;
+  border-radius: 4px;
+  line-height: 1.75;
+  resize: none;
+}
+
+
+
+/*---お問い合わせボタンのレイアウト↓---*/
+
+.bottonForm{
+  margin: 50px auto 0;
+  width: 280px;
+  border-color: #333;
+  cursor: pointer;
+  font-weight: bold;
+  -webkit-appearance: none;
+}
+
+.bottonForm:hover{
+  background-color: #333;
+  color: #fff;
+}
+
+.bottonForm::before{
+  background: linear-gradient(135deg, transparent 0%, transparent 50%, #333 50%, #333 100%);
+  opacity: 1;
+}
+
+
+
+/*----------フッター↓----------*/
+
+footer{
+  background-color: #008DD5;
+}
+
+.footerInner{
+  width: 1000px;
+  margin: 0 auto;
+  padding: 50px 0 30px;
+  display: flex;
+}
+
+.footerInner ul{
+  list-style: none;
+  padding: 0;
+  margin: 0 100px 0 0;
+  font-size: 1.4rem;
+}
+
+.footerInner ul:last-child{
+  margin: 0;
+}
+
+.footerInner ul li a{
+  text-decoration-line: none;
+  color: #fff;
+}
+
+.footerNavBold{
+  font-weight: bold;
+  margin: 0 0 30px 0;
+}
+
+.footerNavMiddle{
+  margin: 0 0 10px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------clearfix↓----------*/
+
+.clearfix::after{
+  content: '';
+  display: block;
+  clear: both;
+}
